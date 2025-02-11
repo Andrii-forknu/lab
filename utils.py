@@ -5,3 +5,13 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 
+def nsd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+x = int(input("Введіть перше число: "))
+y = int(input("Введіть друге число: "))
+print("НСД:", nsd(x, y))
+
